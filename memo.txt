@@ -1,7 +1,13 @@
 Git study memo
 
+フォルダ内容の追加登録
 git add .
 
+最初のコミット
 git commit
 
+ファイルの変更作業
+
 git status
+
+更新ファイルがあることを指摘
