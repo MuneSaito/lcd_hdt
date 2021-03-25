@@ -82,3 +82,9 @@ git pull
 
 使い分け
 プルの注意点
+
+リモートリポジトリのリネーム
+git remote rename old new
+
+リモートリポジトリの削除
+git remote rm repo
