@@ -1,1 +1,7 @@
 Git study memo
+
+git add .
+
+git commit
+
+git status
