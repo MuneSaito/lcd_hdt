@@ -68,3 +68,17 @@ git reset HEAD <ディレクトリ名>
 git reset HEAD .
 
 ステージの変更のみが取り消されるのでワークツリーはそのまま
+
+リモートリポジトリ
+git remote
+git remote -v
+
+
+git fetch
+git marge
+
+いっぺんに
+git pull
+
+使い分け
+プルの注意点
