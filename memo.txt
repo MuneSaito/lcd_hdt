@@ -44,4 +44,15 @@ git mv <旧ファイル名> <新ファイル名>
 　mv old
   git rm old
   git add new
- 
+
+ファイル変更（ワークツリー上）の取り消し
+git checkout -- <ファイル名>
+git checkout -- <ディレクトリ名>
+git checkout -- .
+
+ファイル変更（ステージ）取り消し
+git reset HEAD <ファイル名>
+git reset HEAD <ディレクトリ名>
+git reset HEAD .
+
+ステージの変更のみが取り消されるのでワークツリーはそのまま
