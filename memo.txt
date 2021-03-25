@@ -37,3 +37,11 @@ git rm <ファイル名>
 git rm -r <ディレクトリ名>
 ファイルを残したい（ワークツリーに残しリポジトリから削除）
 git rm --chashed <ファイル名>
+
+ファイルの移動（名称変更）
+git mv <旧ファイル名> <新ファイル名>
+　これは以下と同等
+　mv old
+  git rm old
+  git add new
+ 
