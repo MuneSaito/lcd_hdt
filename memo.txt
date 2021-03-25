@@ -8,6 +8,32 @@ git commit
 
 ファイルの変更作業
 
+現在の変更状況を確認
 git status
+  更新ファイルがあることを指摘
 
-更新ファイルがあることを指摘
+変更内容（差分を確認）
+git diff
+
+git add .(追加・登録ファイル)
+
+ステージの差分を表示
+git diff --staged
+
+コミット
+git commit
+
+変更履歴の確認
+git log
+各1行のみ表示
+git log --oneline
+変更差分表示
+git log -p XX.XX
+表示数制限
+git log -n <コミット数>
+
+ファイルの削除
+git rm <ファイル名>
+git rm -r <ディレクトリ名>
+ファイルを残したい（ワークツリーに残しリポジトリから削除）
+git rm --chashed <ファイル名>
