@@ -88,3 +88,110 @@ git remote rename old new
 
 リモートリポジトリの削除
 git remote rm repo
+
+ブランチ
+状況：並行して複数機能の開発
+ほかの変更の影響を受けない
+
+ブランチの作成
+git branch ブランチ名
+確認
+git log --oneline --decorate
+
+ブランチ切替
+git checkout ブランチ名
+
+マージ
+git merge　origin
+
+マージの種類
+Fast Foward（ブランチ分岐していない時、多で変更された内容を取り込む）
+
+Auto Merge（ブランチ分岐している場合の基本的なマージ）
+
+Conflict(コンフリクト発生時、ブランチ間で同一ファイルを更新している場合)
+
+ブランチを変更。削除する
+git branch -m newブランチ名
+ 作業中のブランチをnewブランチ名に変更
+
+bit branch -d ブランチ名
+ ブランチを削除
+強制削除
+bit branch -D ブランチ名
+ 
+masterブランチをリリース用
+開発はトピックブランチを作成して進める
+
+リモートリポジトリのブランチ状態も表示
+git branch -a
+
+開発手順の流れ
+プルリクエスト
+　masterにmergeするとき、チームへのプル要求　他のメンバーへコードレビューを依頼する
+　修正依頼に対応しapproveを得られたら
+
+GitHub Flow
+masterを基本に開発はブランチで行い、masterへのmerge時にプルリクエストでレビューを受けてからmasterにpushする
+デプロイ
+
+リベース
+変更を統合する
+ブランチにmasterの変更を取り込むのにmergeの代わりにrebaseを使う
+その時にコミットの親コミットがmasterのコミットに切り替わる
+そのあとのmasterのコミットはFastFowardでマージされる
+履歴を整える
+
+リベースでしてはいけないこと
+プッシュしたコミットをリベースするのはNG
+git push -fは絶対NG
+
+rebaseとmergeの使い分け
+
+マージ
+コンフリクトの解決が比較的簡単
+マージ込み意図が他区佐鳴と履歴が複雑化する
+
+リベース
+履歴をきれいに保つ
+コンフリクトの解決が少し面倒 
+
+プッシュしていないローカルの変更にはリベースを使う
+プッシュした後はマージを使う
+コンフリクトしそうならマージを使う
+
+プルにはマージ型、リベース型がある
+マージ型　通常のプル　マージコミットの履歴が残る
+プル型　GitHubの内容を取得したいだけのとき　マージ履歴はいらない
+
+
+タグ　リリースポイントに使用する
+git tag
+注釈付き　-a　<-m "[注釈]">
+軽量版　タグ名のみ、情報なし
+
+git tag　でタグ一覧表示
+git show [タグ名]
+で詳細情報表示
+
+pushでリモートにタグを送信
+git push [リモート名]　[タグ名]
+git push origin --tag　一斉送信　ローカルにあってリモートにないタグを一斉送信する
+
+作業を一時避難
+git stash
+git stash save
+git stash list　避難作業確認
+git stash apply 復元
+git stash apply --index sute-jimo 
+fukugenn 
+tokuteino 
+sagyou 
+を復元
+git stash apply [スタッシュ名]
+git stash apply stash@{1}
+避難作業を削除
+git stash drop 
+
+
+
